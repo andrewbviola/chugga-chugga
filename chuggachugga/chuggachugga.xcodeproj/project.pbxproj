@@ -20,6 +20,7 @@
 		23A40A342C95F09A00D05746 /* PlayerScoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A40A2E2C95F09A00D05746 /* PlayerScoresView.swift */; };
 		23A40A352C95F09A00D05746 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A40A2B2C95F09A00D05746 /* CameraView.swift */; };
 		23A40A362C95F09A00D05746 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A40A2C2C95F09A00D05746 /* CameraViewController.swift */; };
+		23A40A6E2C96264D00D05746 /* yolov8n.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 23A40A6D2C96264D00D05746 /* yolov8n.mlpackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		23A40A2E2C95F09A00D05746 /* PlayerScoresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerScoresView.swift; sourceTree = "<group>"; };
 		23A40A2F2C95F09A00D05746 /* PlayerSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSettings.swift; sourceTree = "<group>"; };
 		23A40A302C95F09A00D05746 /* PlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersView.swift; sourceTree = "<group>"; };
+		23A40A642C961EC800D05746 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23A40A6D2C96264D00D05746 /* yolov8n.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = yolov8n.mlpackage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,8 @@
 		1F7DFC482C951F71001965FC /* chuggachugga */ = {
 			isa = PBXGroup;
 			children = (
+				23A40A6D2C96264D00D05746 /* yolov8n.mlpackage */,
+				23A40A642C961EC800D05746 /* Info.plist */,
 				23A40A2B2C95F09A00D05746 /* CameraView.swift */,
 				23A40A2C2C95F09A00D05746 /* CameraViewController.swift */,
 				23A40A2D2C95F09A00D05746 /* GamesView.swift */,
@@ -276,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23A40A312C95F09A00D05746 /* PlayerSettings.swift in Sources */,
+				23A40A6E2C96264D00D05746 /* yolov8n.mlpackage in Sources */,
 				23A40A322C95F09A00D05746 /* PlayersView.swift in Sources */,
 				23A40A332C95F09A00D05746 /* GamesView.swift in Sources */,
 				23A40A342C95F09A00D05746 /* PlayerScoresView.swift in Sources */,
@@ -449,6 +455,10 @@
 				DEVELOPMENT_TEAM = GMJ72T2QYS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = chuggachugga/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera will be in use";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Domino pictures may be added";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Domino pictures may be stored";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -478,6 +488,10 @@
 				DEVELOPMENT_TEAM = GMJ72T2QYS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = chuggachugga/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera will be in use";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Domino pictures may be added";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Domino pictures may be stored";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
