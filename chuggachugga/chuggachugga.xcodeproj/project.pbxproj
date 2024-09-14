@@ -14,6 +14,12 @@
 		1F7DFC5B2C951F74001965FC /* chuggachuggaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7DFC5A2C951F74001965FC /* chuggachuggaTests.swift */; };
 		1F7DFC652C951F74001965FC /* chuggachuggaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7DFC642C951F74001965FC /* chuggachuggaUITests.swift */; };
 		1F7DFC672C951F74001965FC /* chuggachuggaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7DFC662C951F74001965FC /* chuggachuggaUITestsLaunchTests.swift */; };
+		23A40A312C95F09A00D05746 /* PlayerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A40A2F2C95F09A00D05746 /* PlayerSettings.swift */; };
+		23A40A322C95F09A00D05746 /* PlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A40A302C95F09A00D05746 /* PlayersView.swift */; };
+		23A40A332C95F09A00D05746 /* GamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A40A2D2C95F09A00D05746 /* GamesView.swift */; };
+		23A40A342C95F09A00D05746 /* PlayerScoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A40A2E2C95F09A00D05746 /* PlayerScoresView.swift */; };
+		23A40A352C95F09A00D05746 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A40A2B2C95F09A00D05746 /* CameraView.swift */; };
+		23A40A362C95F09A00D05746 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A40A2C2C95F09A00D05746 /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,12 @@
 		1F7DFC602C951F74001965FC /* chuggachuggaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chuggachuggaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F7DFC642C951F74001965FC /* chuggachuggaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chuggachuggaUITests.swift; sourceTree = "<group>"; };
 		1F7DFC662C951F74001965FC /* chuggachuggaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chuggachuggaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		23A40A2B2C95F09A00D05746 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		23A40A2C2C95F09A00D05746 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		23A40A2D2C95F09A00D05746 /* GamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesView.swift; sourceTree = "<group>"; };
+		23A40A2E2C95F09A00D05746 /* PlayerScoresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerScoresView.swift; sourceTree = "<group>"; };
+		23A40A2F2C95F09A00D05746 /* PlayerSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSettings.swift; sourceTree = "<group>"; };
+		23A40A302C95F09A00D05746 /* PlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +106,12 @@
 		1F7DFC482C951F71001965FC /* chuggachugga */ = {
 			isa = PBXGroup;
 			children = (
+				23A40A2B2C95F09A00D05746 /* CameraView.swift */,
+				23A40A2C2C95F09A00D05746 /* CameraViewController.swift */,
+				23A40A2D2C95F09A00D05746 /* GamesView.swift */,
+				23A40A2E2C95F09A00D05746 /* PlayerScoresView.swift */,
+				23A40A2F2C95F09A00D05746 /* PlayerSettings.swift */,
+				23A40A302C95F09A00D05746 /* PlayersView.swift */,
 				1F7DFC492C951F71001965FC /* chuggachuggaApp.swift */,
 				1F7DFC4B2C951F71001965FC /* ContentView.swift */,
 				1F7DFC4D2C951F74001965FC /* Assets.xcassets */,
@@ -257,6 +275,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23A40A312C95F09A00D05746 /* PlayerSettings.swift in Sources */,
+				23A40A322C95F09A00D05746 /* PlayersView.swift in Sources */,
+				23A40A332C95F09A00D05746 /* GamesView.swift in Sources */,
+				23A40A342C95F09A00D05746 /* PlayerScoresView.swift in Sources */,
+				23A40A352C95F09A00D05746 /* CameraView.swift in Sources */,
+				23A40A362C95F09A00D05746 /* CameraViewController.swift in Sources */,
 				1F7DFC4C2C951F71001965FC /* ContentView.swift in Sources */,
 				1F7DFC4A2C951F71001965FC /* chuggachuggaApp.swift in Sources */,
 			);
@@ -422,6 +446,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"chuggachugga/Preview Content\"";
+				DEVELOPMENT_TEAM = GMJ72T2QYS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -450,6 +475,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"chuggachugga/Preview Content\"";
+				DEVELOPMENT_TEAM = GMJ72T2QYS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
