@@ -1,8 +1,6 @@
 //
-//  ViewController.swift
-//  Yolov8-RealTime-iOS
+//  CameraViewController.swift
 //
-//  Created by 間嶋大輔 on 2023/05/29.
 //
 
 import UIKit
