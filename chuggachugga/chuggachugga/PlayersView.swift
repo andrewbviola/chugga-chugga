@@ -7,30 +7,33 @@
 
 import SwiftUI
 
-struct Player: Identifiable, Hashable {
-    let id = UUID()
-    var name: String
-    var scores: [Int]
-    var total: Int
-}
-
 struct PlayersView: View {
     
-    @State var players: [Player] = [
-        Player(name: "Andrew", scores: [], total: 0),
-        Player(name: "Travis", scores: [], total: 0)
-    ]
+    @Binding var players: [Player]
+    
+    func delete(at offsets: IndexSet) {
+        players.remove(atOffsets: offsets)
+    }
     
     var body: some View {
         
         VStack{
-            Text("players")
+            Text("Players")
                     .font(.largeTitle.bold())
             
-            List(players) { player in
-                NavigationLink(destination: PlayerScoresView(player: $players[players.firstIndex(where: { $0.id == player.id })!])) {
-                    Text("\(player.name) \(player.total)")
+//            List(players) { player in
+//                NavigationLink(destination: PlayerScoresView(player: $players[players.firstIndex(where: { $0.id == player.id })!])) {
+//                    Text("\(player.name) \(player.total)")
+//                }
+//            }
+            
+            List {
+                ForEach(players, id: \.self) { player in
+                    NavigationLink(destination: PlayerScoresView(player: $players[players.firstIndex(where: { $0.id == player.id })!])) {
+                        Text("\(player.name) \(player.total)")
+                    }
                 }
+                .onDelete(perform: delete)
             }
             
             NavigationLink(destination: PlayerSettings(players: $players)) {
@@ -44,6 +47,6 @@ struct PlayersView: View {
     }
 }
 
-#Preview {
-    PlayersView()
-}
+//#Preview {
+//    PlayersView()
+//}

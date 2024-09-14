@@ -8,31 +8,58 @@
 import SwiftUI
 
 struct GamesView: View {    
+    
+    @Binding var games: [String]
+    @State var players: [Player] = []
+    @State var numGames = 0
+    
+    func delete(at offsets: IndexSet) {
+        games.remove(atOffsets: offsets)
+    }
+    
     var body: some View {
         VStack{
             
             VStack {
-                Text("games")
+                Text("Games")
                         .font(.largeTitle.bold())
                 
                 Spacer()
                 
+//                List {
+//                    NavigationLink(destination: PlayersView(players: $players)) {
+//                        Text("Game 1")
+//                    }
+//                    NavigationLink(destination: PlayersView(players: $players)) {
+//                        Text("Game 2")
+//                    }
+//                    NavigationLink(destination: PlayersView(players: $players)) {
+//                        Text("Game 3")
+//                    }
+//                }
+                
                 List {
-                    NavigationLink(destination: PlayersView()) {
-                        Text("Game 1")
+                    ForEach(games, id: \.self) { game in
+                        NavigationLink(destination: PlayersView(players: $players)) {
+                            Text(game)
+                        }
                     }
-                    NavigationLink(destination: PlayersView()) {
-                        Text("Game 2")
-                    }
-                    NavigationLink(destination: PlayersView()) {
-                        Text("Game 3")
-                    }
+                    .onDelete(perform: delete)
                 }
+                
+                Button("Add Game") {
+                    games.append("Game " + "\(numGames + 1)")
+                    numGames += 1
+                }
+                .padding()
+                .background(Color.black)
+                .foregroundColor(Color.white)
+                .cornerRadius(10)
             }
         }
     }
 }
 
-#Preview {
-    GamesView()
-}
+//#Preview {
+//    GamesView()
+//}

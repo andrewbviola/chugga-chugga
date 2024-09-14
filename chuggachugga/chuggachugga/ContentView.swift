@@ -7,7 +7,22 @@
 
 import SwiftUI
 
+struct Player: Identifiable, Hashable {
+    let id = UUID()
+    var name: String
+    var scores: [Int]
+    var total: Int
+}
+
+struct Game: Identifiable, Hashable {
+    let id = UUID()
+    var gameName: String
+    var players: [Player]
+}
+
 struct ContentView: View {
+    
+    @State var games: [String] = []
     
     var body: some View {
         VStack{
@@ -23,7 +38,7 @@ struct ContentView: View {
                         Text("chugga chugga")
                                 .font(.largeTitle.bold())
                         
-                        NavigationLink(destination: GamesView()) {
+                        NavigationLink(destination: GamesView(games: $games)) {
                             Text("CHUG")
                                 .padding()
                                 .background(Color.black)
