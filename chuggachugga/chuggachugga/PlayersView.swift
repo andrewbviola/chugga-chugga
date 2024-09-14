@@ -7,39 +7,38 @@
 
 import SwiftUI
 
+struct Player: Identifiable, Hashable {
+    let id = UUID()
+    var name: String
+    var scores: [Int]
+    var total: Int
+}
+
 struct PlayersView: View {
-    @State private var showingCamera = false
+    
+    @State var players: [Player] = [
+        Player(name: "Andrew", scores: [], total: 0),
+        Player(name: "Travis", scores: [], total: 0)
+    ]
     
     var body: some View {
+        
         VStack{
             Text("players")
                     .font(.largeTitle.bold())
             
-            List {
-                NavigationLink(destination: CounterView()) {
-                    Text("Player 1 (#)")
+            List(players) { player in
+                NavigationLink(destination: PlayerScoresView(player: $players[players.firstIndex(where: { $0.id == player.id })!])) {
+                    Text("\(player.name) \(player.total)")
                 }
-                NavigationLink(destination: CounterView()) {
-                    Text("Player 2")
-                }
-                NavigationLink(destination: CounterView()) {
-                    Text("Player 3")
-                }
-                NavigationLink(destination: CounterView()) {
-                    Text("Player 4")
-                }
-                NavigationLink(destination: CounterView()) {
-                    Text("Player 5")
-                }
-                NavigationLink(destination: CounterView()) {
-                    Text("Player 6")
-                }
-                NavigationLink(destination: CounterView()) {
-                    Text("Player 7")
-                }
-                NavigationLink(destination: CounterView()) {
-                    Text("Player 8")
-                }
+            }
+            
+            NavigationLink(destination: PlayerSettings(players: $players)) {
+                Text("Add Player")
+                    .padding()
+                    .background(Color.black)
+                    .foregroundColor(Color.white)
+                    .cornerRadius(10)
             }
         }
     }
