@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct CameraView: UIViewControllerRepresentable {
+    var onConfirm: ((Int) -> Void)?
+    
     func makeUIViewController(context: Context) -> CameraViewController {
-        return CameraViewController()
-    }
+            let viewController = CameraViewController()
+            viewController.onConfirm = onConfirm
+            return viewController
+        }
 
-    func updateUIViewController(_ uiViewController: CameraViewController, context: Context) {}
+        func updateUIViewController(_ uiViewController: CameraViewController, context: Context) {}
 }
