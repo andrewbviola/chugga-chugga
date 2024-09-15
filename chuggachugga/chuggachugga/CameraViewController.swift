@@ -9,7 +9,7 @@ import SwiftUI
 
 class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, AVCapturePhotoCaptureDelegate {
     @Environment(\.colorScheme) var colorScheme
-    var THRESHOLD: Float = 0.7
+    var THRESHOLD: Float = 0.63
     var captureSession = AVCaptureSession()
     var previewView = UIImageView()
     var previewLayer: AVCaptureVideoPreviewLayer!

@@ -20,7 +20,7 @@
 		23A40A342C95F09A00D05746 /* PlayerScoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A40A2E2C95F09A00D05746 /* PlayerScoresView.swift */; };
 		23A40A352C95F09A00D05746 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A40A2B2C95F09A00D05746 /* CameraView.swift */; };
 		23A40A7A2C9657EF00D05746 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A40A792C9657EF00D05746 /* CameraViewController.swift */; };
-		23A40A962C96C31900D05746 /* yolov2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 23A40A952C96C31900D05746 /* yolov2.mlmodel */; };
+		23A40A992C96F9E700D05746 /* yolov2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 23A40A982C96F9E700D05746 /* yolov2.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +58,7 @@
 		23A40A302C95F09A00D05746 /* PlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersView.swift; sourceTree = "<group>"; };
 		23A40A642C961EC800D05746 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23A40A792C9657EF00D05746 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
-		23A40A952C96C31900D05746 /* yolov2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = yolov2.mlmodel; sourceTree = "<group>"; };
+		23A40A982C96F9E700D05746 /* yolov2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = yolov2.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +109,7 @@
 		1F7DFC482C951F71001965FC /* chuggachugga */ = {
 			isa = PBXGroup;
 			children = (
-				23A40A952C96C31900D05746 /* yolov2.mlmodel */,
+				23A40A982C96F9E700D05746 /* yolov2.mlmodel */,
 				23A40A642C961EC800D05746 /* Info.plist */,
 				23A40A2B2C95F09A00D05746 /* CameraView.swift */,
 				23A40A2D2C95F09A00D05746 /* GamesView.swift */,
@@ -284,11 +284,11 @@
 				23A40A322C95F09A00D05746 /* PlayersView.swift in Sources */,
 				23A40A332C95F09A00D05746 /* GamesView.swift in Sources */,
 				23A40A342C95F09A00D05746 /* PlayerScoresView.swift in Sources */,
+				23A40A992C96F9E700D05746 /* yolov2.mlmodel in Sources */,
 				23A40A352C95F09A00D05746 /* CameraView.swift in Sources */,
 				1F7DFC4C2C951F71001965FC /* ContentView.swift in Sources */,
 				1F7DFC4A2C951F71001965FC /* chuggachuggaApp.swift in Sources */,
 				23A40A7A2C9657EF00D05746 /* CameraViewController.swift in Sources */,
-				23A40A962C96C31900D05746 /* yolov2.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
