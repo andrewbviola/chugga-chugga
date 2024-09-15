@@ -28,6 +28,7 @@ struct PlayersView: View {
 //                }
 //            }
             
+            
             List {
                 ForEach(players, id: \.self) { player in
                     NavigationLink(destination: PlayerScoresView(player: $players[players.firstIndex(where: { $0.id == player.id })!])) {
@@ -36,6 +37,7 @@ struct PlayersView: View {
                     }
                 }
                 .onDelete(perform: delete)
+                .onAppear{players.sort { $0.total < $1.total }}
             }
             
             NavigationLink(destination: PlayerSettings(players: $players)) {

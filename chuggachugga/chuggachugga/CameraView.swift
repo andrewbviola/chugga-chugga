@@ -1,20 +1,20 @@
-////
-////  CameraView.swift
-////  chuggachugga
-////
-////  Created by Travis C on 9/14/24.
-////
 //
-//import SwiftUI
+//  CameraView.swift
+//  chuggachugga
 //
-//struct CameraView: UIViewControllerRepresentable {
-//    var onConfirm: ((Int) -> Void)?
-//    
-//    func makeUIViewController(context: Context) -> CameraViewController {
-//            let viewController = CameraViewController()
-//            viewController.onConfirm = onConfirm
-//            return viewController
-//        }
+//  Created by Travis C on 9/14/24.
 //
-//        func updateUIViewController(_ uiViewController: CameraViewController, context: Context) {}
-//}
+
+import SwiftUI
+
+struct CameraView: UIViewControllerRepresentable {
+    var onConfirm: ((Int) -> Void)?
+    
+    func makeUIViewController(context: Context) -> CameraViewController {
+            let viewController = CameraViewController()
+            viewController.onConfirm = onConfirm
+            return viewController
+        }
+
+        func updateUIViewController(_ uiViewController: CameraViewController, context: Context) {}
+}
