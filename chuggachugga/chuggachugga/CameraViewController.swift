@@ -59,7 +59,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     
     lazy var yoloRequest: VNCoreMLRequest! = {
         do {
-            let model = try yolov8n().model
+            let model = try yolov2().model
             guard let classes = model.modelDescription.classLabels as? [String] else {
                 fatalError()
             }

@@ -1,17 +1,21 @@
-//
-//  PlayerScoresView.swift
-//  chuggachugga
-//
-//  Created by Travis C on 9/14/24.
-//
-
 import SwiftUI
+
+
+struct Round: Identifiable {
+    let id = UUID()
+    let number: Int
+    let score: Int
+}
 
 struct PlayerScoresView: View {
     
     @Environment(\.colorScheme) var colorScheme
     
     @Binding var player: Player
+    
+    var rounds: [Round] {
+            player.scores.enumerated().map { Round(number: $0 + 1, score: $1) }
+        }
     
     var body: some View {
         VStack {
@@ -20,20 +24,15 @@ struct PlayerScoresView: View {
             
             Spacer()
             
-            List() {
-                
-                ForEach(player.scores, id: \.self) { number in
-                    Text("Round \(player.round) | \(number)")
+            List {
+            ForEach(rounds) { round in
+                Text("Round \(round.number) | \(round.score)")
                 }
-//                for (n, c) in player.scores.enumerated() {
-//                    Text("Round \(n) | \(c)")
-//                }
             }
             
             NavigationLink(destination: CameraView(onConfirm: { sum in
                 player.scores.append(sum)
                 player.total += sum
-
             })) {
                 Text("Add Score")
                     .padding()
@@ -42,19 +41,6 @@ struct PlayerScoresView: View {
                     .cornerRadius(10)
             }
             .padding()
-            
-//            Button("Add Score") {
-//                player.scores.append(10)
-//                player.total += 10
-//            }
-//            .padding()
-//            .background(Color.black)
-//            .foregroundColor(Color.white)
-//            .cornerRadius(10)
         }
     }
 }
-//#Preview {
-//    @State var test = Player(name: "Test")
-//    PlayerScoresView(player: $test)
-//}

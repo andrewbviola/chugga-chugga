@@ -11,7 +11,6 @@ struct Player: Identifiable, Hashable {
     let id = UUID()
     var name: String
     var scores: [Int]
-    var round: Int = 0
     var total: Int
     var emoji: String
     var color: Color
@@ -43,7 +42,7 @@ struct ContentView: View {
 //                        .font(.system(size: 144))
                     
                     VStack {
-                        Text("chugga chugga")
+                        Text("Choo Choo")
                                 .font(.largeTitle.bold())
                         
                         NavigationLink(destination: GamesView(games: $games)) {
