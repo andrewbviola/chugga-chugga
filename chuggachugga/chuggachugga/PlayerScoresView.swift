@@ -19,22 +19,34 @@ struct PlayerScoresView: View {
             Spacer()
             
             List {
-                ForEach(player.scores, id: \.self) { number in
-                    Text("\(number)")
+//                ForEach(player.scores, id: \.self) { number in
+//                    Text("Round \(number)")
+//                }
+                for (n, c) in player.scores.enumerated() {
+                    Text("Round \(n) | \(c)")
                 }
             }
             
-            NavigationLink(destination: CameraView(onConfirm: { sum in
-                player.scores.append(sum)
-                player.total += sum
-            })) {
-                Text("Add Score")
-                    .padding()
-                    .background(Color.black)
-                    .foregroundColor(Color.white)
-                    .cornerRadius(10)
+//            NavigationLink(destination: CameraView(onConfirm: { sum in
+//                player.scores.append(sum)
+//                player.total += sum
+//            })) {
+//                Text("Add Score")
+//                    .padding()
+//                    .background(colorScheme == .dark ? Color.white : Color.black)
+//                    .foregroundColor(colorScheme == .dark ? Color.black : Color.white)
+//                    .cornerRadius(10)
+//            }
+//            .padding()
+            
+            Button("Add Score") {
+                player.scores.append(10)
+                player.total += 10
             }
             .padding()
+            .background(Color.black)
+            .foregroundColor(Color.white)
+            .cornerRadius(10)
         }
     }
 }

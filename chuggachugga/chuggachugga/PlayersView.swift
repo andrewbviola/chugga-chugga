@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PlayersView: View {
     
+    @Environment(\.colorScheme) var colorScheme
     @Binding var players: [Player]
     
     func delete(at offsets: IndexSet) {
@@ -30,7 +31,8 @@ struct PlayersView: View {
             List {
                 ForEach(players, id: \.self) { player in
                     NavigationLink(destination: PlayerScoresView(player: $players[players.firstIndex(where: { $0.id == player.id })!])) {
-                        Text("\(player.name) \(player.total)")
+                        Text("\(player.emoji) | \(player.name) | \(player.total)")
+                            .foregroundStyle(player.color)
                     }
                 }
                 .onDelete(perform: delete)
@@ -39,8 +41,8 @@ struct PlayersView: View {
             NavigationLink(destination: PlayerSettings(players: $players)) {
                 Text("Add Player")
                     .padding()
-                    .background(Color.black)
-                    .foregroundColor(Color.white)
+                    .background(colorScheme == .dark ? Color.white : Color.black)
+                    .foregroundColor(colorScheme == .dark ? Color.black : Color.white)
                     .cornerRadius(10)
             }
         }

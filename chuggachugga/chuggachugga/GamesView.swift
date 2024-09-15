@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GamesView: View {    
     
+    @Environment(\.colorScheme) var colorScheme
     @Binding var games: [String]
     @State var players: [Player] = []
     @State var numGames = 0
@@ -52,8 +53,8 @@ struct GamesView: View {
                     numGames += 1
                 }
                 .padding()
-                .background(Color.black)
-                .foregroundColor(Color.white)
+                .background(colorScheme == .dark ? Color.white : Color.black)
+                .foregroundColor(colorScheme == .dark ? Color.black : Color.white)
                 .cornerRadius(10)
             }
         }

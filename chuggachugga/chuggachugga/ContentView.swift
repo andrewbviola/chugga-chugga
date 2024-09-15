@@ -12,6 +12,8 @@ struct Player: Identifiable, Hashable {
     var name: String
     var scores: [Int]
     var total: Int
+    var emoji: String
+    var color: Color
 }
 
 struct Game: Identifiable, Hashable {
@@ -22,6 +24,8 @@ struct Game: Identifiable, Hashable {
 
 struct ContentView: View {
     
+    @Environment(\.colorScheme) var colorScheme
+    
     @State var games: [String] = []
     
     var body: some View {
@@ -30,19 +34,22 @@ struct ContentView: View {
             NavigationView {
                 
                 VStack{
-                    Image("DominoDark")
+                    Image(colorScheme == .dark ? "DominoDark" : "DominoLight")
                         .resizable()
                         .frame(width: 100, height: 136)
+                    
+//                    Text("🚂")
+//                        .font(.system(size: 144))
                     
                     VStack {
                         Text("chugga chugga")
                                 .font(.largeTitle.bold())
                         
                         NavigationLink(destination: GamesView(games: $games)) {
-                            Text("CHUG")
+                            Text("ALL ABOARD")
                                 .padding()
-                                .background(Color.black)
-                                .foregroundColor(Color.white)
+                                .background(colorScheme == .dark ? Color.white : Color.black)
+                                .foregroundColor(colorScheme == .dark ? Color.black : Color.white)
                                 .cornerRadius(10)
                         }
                     }
